@@ -1,10 +1,9 @@
-version: "1"
 name: highlight
 
 services:
   backend:
     build:
-      context: ./docker
+      context: ..
       dockerfile: backend.Dockerfile
     ports:
       - "8082:8082"
@@ -23,7 +22,7 @@ services:
 
   frontend:
     build:
-      context: ./docker
+      context: ..
       dockerfile: frontend.Dockerfile
     ports:
       - "3000"
@@ -34,7 +33,7 @@ services:
 
   collector:
     build:
-      context: ./docker
+      context: ..
       dockerfile: collector.Dockerfile
     ports:
       - "4317"
