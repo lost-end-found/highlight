@@ -12,7 +12,6 @@ services:
             - ../backend/env.enc.dgst:/build/env.enc.dgst
             - ../backend/localhostssl/server.key:/build/localhostssl/server.key
             - ../backend/localhostssl/server.crt:/build/localhostssl/server.crt
-        env_file: .env
 
     frontend:
         container_name: frontend
@@ -25,7 +24,6 @@ services:
             - '3000'
             - '6006'
             - '8080'
-        env_file: .env
 
 volumes:
     highlight-data:
