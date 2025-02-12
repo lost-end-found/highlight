@@ -53,7 +53,7 @@ COPY ../sourcemap-uploader ./sourcemap-uploader
 # ARG NODE_OPTIONS="--max-old-space-size=16384 --openssl-legacy-provider"
 # ARG DOPPLER_TOKEN
 # RUN doppler me
-# RUN doppler run -- yarn build:frontend
+RUN  yarn build:frontend
 
 # reduce the image size by keeping just the built code
 FROM nginx:stable-alpine AS frontend-prod
